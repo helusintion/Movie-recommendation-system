@@ -10,9 +10,9 @@ if st.button("ABOUT"):
             "These systems enhance user experience by providing personalized movie recommendations\n, "
             "helping users discover films they are likely to enjoy.")
 
-# Load association rules data
+# Load association rules
 try:
-    dfr1 = pd.read_csv('/content/rules1_inoice.csv', index_col=0)
+    dfr1 = pd.read_csv(r'C:\Users\DELL\Downloads\New folder\rules1_inoice (1).csv', index_col=0)
 except FileNotFoundError:
     st.error("The CSV file 'rules1_invoice.csv' was not found. Please check the file path.")
     st.stop()
@@ -27,7 +27,7 @@ st.write(dfr1['antecedents'].value_counts())
 
 # Load merged data
 try:
-    dfDF = pd.read_csv('/content/rules1_inoice.csv')  # Adjust the path as needed
+    dfDF = pd.read_csv(r'C:\Users\DELL\Downloads\New folder\rules1_inoice (1).csv')  # Adjust the path as needed
 except FileNotFoundError:
     st.error("The CSV file 'merged_data.csv' was not found. Please check the file path.")
     st.stop()
