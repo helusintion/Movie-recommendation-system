@@ -12,11 +12,9 @@ if st.button("ABOUT"):
 
 # Load association rules data
 try:
-    df1 = pd.read_csv('rules1_inoice.csv', index_col=0)
-    st.write("Association Rules DataFrame:")
-    st.write(df1.head())
+    dfr1 = pd.read_csv(r'C:\Users\DELL\Downloads\rules1_inoice (1).csv', index_col=0)
 except FileNotFoundError:
-    st.error("The CSV file 'rules1_inoice.csv' was not found. Please check the file path.")
+    st.error("The CSV file 'rules1_invoice.csv' was not found. Please check the file path.")
     st.stop()
 
 # Display the DataFrame
